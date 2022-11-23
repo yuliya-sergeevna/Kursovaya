@@ -9,16 +9,20 @@ const int InitialCount = 100;
 int Count, Num, Player;
 bool Correct;
 
-int main() {
+int main()
+{
     setlocale(LC_ALL, "Russian");
     srand(time(0));
     system("cls");
     Player = 1;
     Count = InitialCount;
-    do {
+    do
+    {
 
-        if (Player == 1) {
-            do {
+        if (Player == 1)
+        {
+            do
+            {
                 cout << "Ваш ход. На столе " << Count << " спичек.\n";
                 cout << "Сколько спичек Вы берете?\n";
                 cin >> Num;
@@ -33,7 +37,8 @@ int main() {
         }
         else
         {
-            do {
+            do
+            {
                 Num = rand() % 10 + 1;
                 if (Num > Count)
                     Num = Count;
@@ -48,7 +53,8 @@ int main() {
     } while (Count > 0);
     if (Player == 1)
         cout << "Вы победили!";
-    else cout << "Вы проиграли!";
+    else
+        cout << "Вы проиграли!";
     cout << endl;
     system("pause");
     return 0;
